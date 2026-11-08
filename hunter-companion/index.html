@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Horde BM Hunter Companion: Levels 26–60</title>
+<style>
+:root{--bg:#120d0b;--panel:#1d1512;--line:#4a2c22;--red:#b3261e;--gold:#d4a24c;--hunt:#abd473;--txt:#eee3d3;--mut:#b5a493}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font:17px/1.5 -apple-system,system-ui,sans-serif;overflow-x:hidden}
+header{padding:14px 18px;border-bottom:2px solid var(--red);background:linear-gradient(#2a1410,var(--bg))}
+h1{margin:0;font-size:22px;color:var(--gold)}h2{color:var(--hunt);font-size:19px;margin:18px 0 8px;border-bottom:1px dashed var(--line)}
+.sub{color:var(--mut);font-size:14px}
+.layout{display:flex;flex-direction:column}
+#ctrl{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line);padding:10px 14px}
+main{padding:12px 16px 60px;max-width:900px;min-width:0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button,select{min-height:44px;min-width:44px;font-size:17px;border-radius:10px;border:1px solid var(--gold);background:#2b1d17;color:var(--txt);padding:0 14px}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--hunt);outline-offset:2px}
+#lvl{font-size:30px;font-weight:700;color:var(--gold);min-width:64px;text-align:center}
+input[type=range]{width:100%;height:44px;accent-color:var(--red)}
+.mode{display:flex;gap:6px}.mode button[aria-pressed=true]{background:var(--red);border-color:var(--red)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+.tag{display:inline-block;font-size:12px;padding:1px 7px;border-radius:9px;margin-left:4px;vertical-align:middle;white-space:nowrap}
+.t-off{background:#29415e}.t-cl{background:#3b5a2a}.t-dm{background:#5a4a1d}.t-co{background:#4b2f5a}.t-un{background:#6b1f1a}
+.gap{border:2px solid var(--red);background:#2a1110}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.alloc{font-size:15px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}
+.wrap{overflow-x:auto}
+label.chk{display:flex;align-items:center;gap:10px;min-height:44px}label.chk input{width:26px;height:26px}
+#warn{color:#f2b8a8;font-size:14px}
+@media (orientation:landscape) and (min-width:900px){
+ .layout{flex-direction:row}
+ #ctrl{position:sticky;top:0;align-self:flex-start;height:100vh;width:300px;flex:0 0 300px;border-bottom:0;border-right:1px solid var(--line);overflow-y:auto}
+ main{flex:1}
+}
+</style></head><body>
+<header><h1>Horde Beast Mastery Hunter: Leveling Companion</h1>
+<div class="sub">For a level 26 Hunter with a cat, after a respec. Talents and pet facts are <b>provisional</b>. Last checked 8 Nov 2026. Pet changes have been reported as planned for 10 Nov; we have not verified the primary announcement.</div></header>
+<div class="layout">
+<nav id="ctrl" aria-label="Level selector">
+ <div class="mode" role="group" aria-label="Range">
+  <button id="mMain" aria-pressed="true">Levels 26–60</button><button id="mCatch" aria-pressed="false">Catch-up 1–25</button></div>
+ <div class="row" style="margin-top:8px;justify-content:space-between">
+  <button id="prev" aria-label="Previous level">◀ Prev</button>
+  <output id="lvl" aria-live="polite">26</output>
+  <button id="next" aria-label="Next level">Next ▶</button></div>
+ <label for="slider" class="sub">Character level</label>
+ <input id="slider" type="range" min="26" max="60" value="26" aria-label="Character level">
+ <label class="chk"><input type="checkbox" id="done"> Done for this level</label>
+ <div id="warn" role="status"></div>
+ <div class="sub">Labels: <span class="tag t-off">Official notes</span><span class="tag t-dm">Datamined (unconfirmed)</span><span class="tag t-co">Community</span><span class="tag t-un">Unverified</span></div>
+</nav>
+<main>
+<div class="card gap" role="note"><b>Draft:</b> The current live talent tree has not been checked. Talent row and prerequisite validity was checked against an older tree snapshot only.</div>
+<div class="card gap" role="note"><b>What isn't verified yet:</b> The pet trainer's rank levels and costs, and the exact beasts that teach each Bite, Claw, Dash and Prowl rank, have not been confirmed for Forever. Where a level shows <b>Unknown</b>, it means "not verified", not "nothing to learn". Check with Beast Lore and the trainer in game.</div>
+<section id="level" aria-live="polite"></section>
+<h2>Respec at 26: your 17 points</h2>
+<div class="card"><ul>
+<li>Endurance Training 3/5, Deadly Aspects 5/5, Focused Fire 2/2, Bestial Swiftness 1/1, Unleashed Fury 5/5, Summon Hawk 1/1 (16th point). <span class="tag t-co">Community</span> <span class="tag t-un">Not confirmed on the live client</span></li>
+<li>Matches the existing leveling recommendation and one community list; not independently verified live. Respec at a class trainer.</li>
+<li>Points follow the standard rule: level minus 9.</li></ul></div>
+<h2>Learn a pet ability, then teach it to your cat</h2>
+<div class="card"><p class="sub">All steps below come from community reports. <span class="tag t-co">Community</span></p>
+<h3>Learn a rank (with a temporary beast)</h3><ol>
+<li>Stable your cat first. Community reports say you can't tame while you have a pet, even a dismissed one.</li>
+<li>Use Beast Lore (from level 24) to see which abilities and ranks a wild beast knows. You can only tame beasts at or below <b>your Hunter's level</b>. That limit is separate from rank limits: reports say a beast can't keep a rank above <b>its own level</b>, and to teach a rank your cat must be at least that rank's pet level.</li>
+<li>Tame it and fight easy mobs. Turn off its other abilities so it uses the one you want over and over.</li>
+<li>Open Beast Training and check the rank is listed as learned <b>before</b> you get rid of the teacher. Use the game's own abandon/release option.</li></ol>
+<p><b>If you aren't learning it:</b> make sure the beast really knows that rank (check with Beast Lore again), check you don't already know it, and give it more uses or longer fights.</p>
+<h3>Teach it to your cat</h3><ol>
+<li>Take your cat back from the stable and open Beast Training.</li>
+<li>To teach a rank, the cat's family must be able to use the ability, the cat must be at least that rank's pet level, and it needs enough training points. A pet trainer can untrain for a fee.</li></ol>
+<p class="sub">Pet trainer, for every family: Growl, Great Stamina, Natural Armor and the resistances. Learned from tames: Bite, Claw, Dash and Prowl. <span class="tag t-co">Community</span> Cower: sources disagree. <span class="tag t-un">Unverified</span></p></div>
+<h2>Your cat: keep or replace</h2>
+<div class="card"><ul>
+<li><b>Default: keep your current cat.</b> Learning new ranks is what keeps it current.</li>
+<li>Cat kit: Bite and Claw start at rank 1; the pet levels for higher ranks are unverified. Dash and Prowl have 3 ranks each. Prowl starts at pet level 30; Dash at 30 or 32 (unresolved). <span class="tag t-dm">Datamined (unconfirmed)</span></li>
+<li>No verified benefit has been found for replacing your current cat just for attack speed. <span class="tag t-un">Unverified</span></li>
+<li>When you untrain a pet, it keeps its built-in attack speed. <span class="tag t-off">Official notes</span></li>
+<li>Planned 10 Nov pet changes have been reported, but we have not verified the primary announcement. Nothing here assumes them. <span class="tag t-un">Unverified</span></li></ul></div>
+<p class="sub">Sources: a community source and official development notes. Progress is saved on this device only, if your browser allows it.</p>
+</main></div>
+<script>
+"use strict";
+var T=[];function add(a,b,n,tree){for(var l=a;l<=b;l++)T[l]={n:n,tree:tree}}
+var ORDER=[[10,12,"Endurance Training","BM"],[13,14,"Deadly Aspects","BM"],[15,16,"Focused Fire","BM"],[17,19,"Deadly Aspects","BM"],[20,20,"Bestial Swiftness","BM"],[21,24,"Unleashed Fury","BM"],[25,25,"Summon Hawk","BM"],[26,26,"Unleashed Fury","BM"],[27,29,"Ferocity","BM"],[30,30,"Intimidation","BM"],[31,32,"Bestial Discipline","BM"],[33,34,"Ferocity","BM"],[35,39,"Frenzy","BM"],[40,40,"Bestial Wrath","BM"],[41,45,"Lethal Attacks","MM"],[46,50,"Careful Aim","MM"],[51,55,"Efficiency","MM"],[56,56,"Trueshot Aura","MM"],[57,60,"Mortal Shots","MM"]];
+ORDER.forEach(function(o){add(o[0],o[1],o[2],o[3])});
+function alloc(L){var c={},bm=0,mm=0,o=[];for(var l=10;l<=L;l++){var t=T[l];c[t.n]=(c[t.n]||0)+1;t.tree=="BM"?bm++:mm++}for(var k in c)o.push(k+" "+c[k]);return {txt:o.join(", "),bm:bm,mm:mm,total:bm+mm}}
+var TR={1:"Auto Shot, Raptor Strike, Track Beasts",4:"Aspect of the Monkey, Serpent Sting",6:"Arcane Shot, Hunter's Mark",8:"Concussive Shot; Raptor Strike 2",10:"Aspect of the Hawk, Track Humanoids; Serpent Sting 2. Taming quest: Tame Beast, Call/Dismiss/Feed/Revive Pet, Beast Training",12:"Mend Pet, Distracting Shot, Wing Clip; Arcane Shot 2",14:"Eagle Eye, Eyes of the Beast, Scare Beast",16:"Immolation Trap, Mongoose Bite; Raptor Strike 3",18:"Multi-Shot, Track Undead; Aspect of the Hawk 2, Serpent Sting 3",20:"Aspect of the Cheetah, Aimed Shot, Disengage, Freezing Trap; Mend Pet 2, Arcane Shot 3, Distracting Shot 2",22:"Scorpid Sting; Hunter's Mark 2",24:"Beast Lore, Track Hidden; Raptor Strike 4",26:"Rapid Fire, Track Elementals; Serpent Sting 4, Immolation Trap 2",28:"Frost Trap; Aspect of the Hawk 3, Mend Pet 3, Arcane Shot 4, Aimed Shot 2",30:"Aspect of the Beast, Feign Death, Lacerate*; Scare Beast 2, Distracting Shot 3, Mongoose Bite 2",32:"Flare, Track Demons; Raptor Strike 5",34:"Explosive Trap; Serpent Sting 5, Disengage 2",36:"Viper Sting; Mend Pet 4, Arcane Shot 5, Aimed Shot 3, Immolation Trap 3",38:"Aspect of the Hawk 4, Wing Clip 2",40:"Aspect of the Pack, Volley, Track Giants; Aspect of the Beast 2, Hunter's Mark 3, Distracting Shot 4, Raptor Strike 6, Freezing Trap 2, Lacerate 2*. Dual spec unlocks",42:"Serpent Sting 6",44:"Mend Pet 5, Arcane Shot 6, Aimed Shot 4, Mongoose Bite 3, Explosive Trap 2",46:"Aspect of the Wild; Scare Beast 3, Viper Sting 2, Immolation Trap 4",48:"Aspect of the Hawk 5, Raptor Strike 7, Disengage 3",50:"Track Dragonkin; Aspect of the Beast 3, Serpent Sting 7, Distracting Shot 5, Volley 2, Lacerate 3*",52:"Mend Pet 6, Arcane Shot 7, Aimed Shot 5",54:"Explosive Trap 3",56:"Aspect of the Wild 2, Viper Sting 3, Raptor Strike 8, Immolation Trap 5",58:"Aspect of the Hawk 6, Serpent Sting 8, Hunter's Mark 4, Volley 3, Mongoose Bite 4",60:"Tranquilizing Shot*; Aspect of the Hawk 7, Mend Pet 7, Aspect of the Beast 4, Serpent Sting 9, Arcane Shot 8, Distracting Shot 6, Aimed Shot 6, Wing Clip 3, Freezing Trap 3, Lacerate 4*"};
+var PET={16:"Claw 3 needs pet level 16. <span class='tag t-co'>Community</span>",30:"Prowl rank 1 at pet level 30. Dash starts at pet level 30 or 32; unresolved. <span class='tag t-dm'>Datamined (unconfirmed)</span>",40:"Prowl rank 2 at pet level 40. <span class='tag t-dm'>Datamined (unconfirmed)</span>",50:"Prowl rank 3 at pet level 50. <span class='tag t-dm'>Datamined (unconfirmed)</span>"};
+var MIN=26,MAX=60,store=null,L=26;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t");store=localStorage}catch(e){}
+function g(k){try{return store?store.getItem(k):null}catch(e){return null}}
+function s(k,v){try{if(store)store.setItem(k,v)}catch(e){}}
+var W=document.getElementById("warn");if(!store)W.textContent="Saving isn't available in this browser view, so your level and progress will reset when you close the page.";
+else W.textContent="Saved on this device only. Saving from a local file may not last in Safari.";
+function render(){var sl=document.getElementById("slider");sl.min=MIN;sl.max=MAX;sl.value=L;
+document.getElementById("lvl").textContent=L;
+var h="<h2>Level "+L+"</h2><div class='card'>";
+if(L>=10){var a=alloc(L),t=T[L];h+="<p><b>Talent point:</b> "+t.n+" ("+t.tree+") <span class='tag t-co'>Community order</span></p><p class='alloc' data-total='"+a.total+"'>Total: "+a.total+" points ("+a.bm+" BM / "+a.mm+" MM / 0 SV). "+a.txt+"</p>";}
+else h+="<p><b>Talent point:</b> none until level 10.</p>";
+if(L==26)h+="<p class='sub'>Respec here. See the 17-point summary below.</p>";
+h+="<p><b>Hunter unlocks (where each comes from not fully verified):</b> "+(TR[L]?TR[L]+" <span class='tag t-co'>Community list</span>":"Nothing listed for this level <span class='tag t-co'>Community list</span>")+"</p>"+(/\*/.test(TR[L]||'')?"<p class='sub'>* Unverified whether this comes from a trainer, a quest or a book; this applies to all Lacerate ranks and to Tranquilizing Shot.</p>":"")+"<p class='sub'>Check whether a spell comes from a trainer, a quest or a book before you spend gold or travel.</p>";
+h+="<p><b>Pet trainer:</b> Rank levels for Growl, Great Stamina, Natural Armor and resistances: <b>Unknown</b>. Check the pet trainer. <span class='tag t-un'>Unverified</span></p>";
+h+="<p><b>Pet level gates:</b> "+(PET[L]||"<b>Unknown</b> for Bite/Claw ranks at this level <span class='tag t-un'>Unverified</span>")+"</p>";
+h+="<p><b>Temporary teaching tames:</b> <b>Unknown</b>. No named beast has been confirmed as teaching a rank at this level. Use Beast Lore on beasts at or below your level. <span class='tag t-un'>Unverified</span></p>";
+if(L==40)h+="<p>Bestial Wrath is a <b>talent</b> (31 points), not a trainer spell.</p>";
+h+="</div>";document.getElementById("level").innerHTML=h;
+document.getElementById("done").checked=g("done"+L)=="1";
+document.getElementById("prev").disabled=L<=MIN;document.getElementById("next").disabled=L>=MAX;
+document.getElementById("mMain").setAttribute("aria-pressed",MIN==26);document.getElementById("mCatch").setAttribute("aria-pressed",MIN==1);
+s("level",L);}
+function setMode(c){MIN=c?1:26;MAX=c?25:60;L=c?1:26;render()}
+document.getElementById("prev").onclick=function(){if(L>MIN){L--;render()}};
+document.getElementById("next").onclick=function(){if(L<MAX){L++;render()}};
+document.getElementById("slider").oninput=function(e){L=+e.target.value;render()};
+document.getElementById("mMain").onclick=function(){setMode(0)};document.getElementById("mCatch").onclick=function(){setMode(1)};
+document.getElementById("done").onchange=function(e){s("done"+L,e.target.checked?"1":"0")};
+var q=+(location.hash.replace("#",""))||+g("level")||26;if(q>=1&&q<=60){if(q<26){MIN=1;MAX=25}L=q}
+render();
+</script></body></html>
