@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Horde Beast Mastery Hunter leveling companion for WoW Forever, levels 26 to 60: step-by-step checklist with pet notes. Draft; steps come from community reports unless labelled otherwise.">
+<meta property="og:title" content="Horde BM Hunter Companion: Levels 26–60">
+<meta property="og:description" content="Horde Beast Mastery Hunter leveling companion for WoW Forever, levels 26 to 60: step-by-step checklist with pet notes. Draft; steps come from community reports unless labelled otherwise.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wowforeverguides.github.io/WoW-Forever/hunter-companion/">
+<meta property="og:site_name" content="WoW Forever Guides">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Horde BM Hunter Companion: Levels 26–60">
+<meta name="twitter:description" content="Horde Beast Mastery Hunter leveling companion for WoW Forever, levels 26 to 60: step-by-step checklist with pet notes. Draft; steps come from community reports unless labelled otherwise.">
 <title>Horde BM Hunter Companion: Levels 26–60</title>
 <style>
 :root{--bg:#120d0b;--panel:#1d1512;--line:#4a2c22;--red:#b3261e;--gold:#d4a24c;--hunt:#abd473;--txt:#eee3d3;--mut:#b5a493}
@@ -32,9 +41,14 @@ label.chk{display:flex;align-items:center;gap:10px;min-height:44px}label.chk inp
  #ctrl{position:sticky;top:0;align-self:flex-start;height:100vh;width:300px;flex:0 0 300px;border-bottom:0;border-right:1px solid var(--line);overflow-y:auto}
  main{flex:1}
 }
+
+.ico{width:36px;height:36px;vertical-align:middle;border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.12);background:#1a1512;object-fit:contain;flex:none}
+.icorow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.copyright-note{font-size:.8rem;opacity:.8;margin:.8rem 0}
+
 </style></head><body>
 <header><h1>Horde Beast Mastery Hunter: Leveling Companion</h1>
-<div class="sub"><b>Draft v0.2.0</b> · For a level 26 Hunter with a cat, after a respec. Talents and pet facts are <b>provisional</b>. Last checked 8 Nov 2026 (game client 1.60.1.70862). Blizzard has announced pet changes for 10 Nov; they are not live yet and no numbers have been given.</div></header>
+<div class="sub"><b>Draft v0.3.0</b> · For a level 26 Hunter with a cat, after a respec. Talents and pet facts are <b>provisional</b>. Last checked 9 Nov 2026 (game client 1.60.1.70862). Blizzard has announced pet changes for 10 Nov; they are not live yet and no numbers have been given.</div></header>
 <div class="layout">
 <nav id="ctrl" aria-label="Level selector">
  <div class="mode" role="group" aria-label="Range">
@@ -53,12 +67,12 @@ label.chk{display:flex;align-items:center;gap:10px;min-height:44px}label.chk inp
 <div class="card gap" role="note"><b>Draft:</b> Talent rows, ranks and prerequisites were checked against datamined talent data for client 1.60.1.70862 (the current client since 7 Nov). That data has not been confirmed in game.</div>
 <div class="card gap" role="note"><b>What isn't verified yet:</b> The pet levels each rank needs come from datamined client data. Training-point costs are not verified. No beast has been confirmed in Forever as the teacher of any Bite, Claw, Dash or Prowl rank, and the current pet trainer locations are unresolved. Where a level shows <b>Unknown</b>, it means "not verified", not "nothing to learn".</div>
 <section id="level" aria-live="polite"></section>
-<h2>Respec at 26: your 17 points</h2>
+<h2 class="icorow"><img class="ico" src="assets/icons/talent-bm.png" width="36" height="36" loading="lazy" alt="Beast Mastery"> Respec at 26: your 17 points</h2>
 <div class="card"><ul>
 <li>Endurance Training 3/5, Deadly Aspects 5/5, Focused Fire 2/2, Bestial Swiftness 1/1, Unleashed Fury 5/5, Summon Hawk 1/1 (16th point). <span class="tag t-co">Community</span> <span class="tag t-un">Not confirmed on the live client</span></li>
 <li>Matches the existing leveling recommendation and one community list; not independently verified live. Respec at a class trainer.</li>
 <li>Points follow the standard rule: level minus 9.</li></ul></div>
-<h2>Learn a pet ability, then teach it to your cat</h2>
+<h2 class="icorow"><img class="ico" src="assets/icons/ability-beast-training.png" width="36" height="36" loading="lazy" alt="Beast Training"> Learn a pet ability, then teach it to your cat</h2>
 <div class="card"><p class="sub">Steps come from community reports unless a step is labelled otherwise.</p>
 <h3>Learn a rank (with a temporary beast)</h3><ol>
 <li>Stable your cat first. You can't tame while you have a pet out, and the stable holds 2 pets besides your active one. <span class="tag t-co">Community</span> <span class="tag t-dm">Datamined (unconfirmed)</span></li>
@@ -70,19 +84,21 @@ label.chk{display:flex;align-items:center;gap:10px;min-height:44px}label.chk inp
 <h3>Teach it to your cat</h3><ol>
 <li>Take your cat back from the stable and open Beast Training.</li>
 <li>To teach a rank, the cat's family must be able to use it, the cat must be at least that rank's pet level, and it needs enough training points. The point costs come from the server and are <b>Unknown</b>. A pet trainer can untrain for a fee. <span class="tag t-co">Community</span></li></ol>
-<p class="sub"><b>Pet trainer skills</b> (any family): Growl, Great Stamina, Natural Armor and the five resistances. <span class="tag t-co">Community</span> <b>Great Stamina and Natural Armor rank 1:</b> the client data gives pet level 1 or 10, so the level is unresolved; this page shows 10 for now. All pet rank levels here are datamined. <span class="tag t-dm">Datamined (unconfirmed)</span> <b>Learned from beasts:</b> Bite, Claw, Dash and Prowl. <b>Cower:</b> sources disagree on whether it comes from the pet trainer or from beasts; unresolved. <span class="tag t-un">Unverified</span></p>
+<p class="sub icorow"><img class="ico" src="assets/icons/ability-growl.png" width="36" height="36" loading="lazy" alt="Growl"> <img class="ico" src="assets/icons/ability-cower.png" width="36" height="36" loading="lazy" alt="Cower"> <b>Pet trainer skills</b> (any family): Growl, Great Stamina, Natural Armor and the five resistances. <span class="tag t-co">Community</span> <b>Great Stamina and Natural Armor rank 1:</b> the client data gives pet level 1 or 10, so the level is unresolved; this page shows 10 for now. All pet rank levels here are datamined. <span class="tag t-dm">Datamined (unconfirmed)</span> <b>Learned from beasts:</b> <img class="ico" src="assets/icons/ability-bite.png" width="36" height="36" loading="lazy" alt="Bite"> Bite · <img class="ico" src="assets/icons/ability-claw.png" width="36" height="36" loading="lazy" alt="Claw"> Claw · <img class="ico" src="assets/icons/ability-dash.png" width="36" height="36" loading="lazy" alt="Dash"> Dash · <img class="ico" src="assets/icons/ability-prowl.png" width="36" height="36" loading="lazy" alt="Prowl"> Prowl. <b>Cower:</b> sources disagree on whether it comes from the pet trainer or from beasts; unresolved. <span class="tag t-un">Unverified</span></p>
 <p class="sub"><b>Where the pet trainers are:</b> current Horde locations in Forever are unresolved; ask a city guard or look in your capital. <span class="tag t-un">Unverified</span></p>
-<h2>Your cat: keep or replace</h2>
+<h2 class="icorow"><img class="ico" src="assets/icons/pet-cat.png" width="36" height="36" loading="lazy" alt="Cat"> Your cat: keep or replace</h2>
 <div class="card"><ul>
 <li><b>Default: keep your current cat.</b> Learning new ranks is what keeps it current.</li>
-<li>Cat kit: Bite and Claw, 8 ranks each, at pet levels 1, 8, 16, 24, 32, 40, 48 and 56. Prowl and Dash, 3 ranks each, at pet levels 30, 40 and 50. <span class="tag t-dm">Datamined (unconfirmed)</span> One beta tester could not teach Dash until 32; unresolved. <span class="tag t-un">Unverified</span></li>
+<li class="icorow"><img class="ico" src="assets/icons/pet-cat.png" width="36" height="36" loading="lazy" alt="Cat"> Cat kit: Bite and Claw, 8 ranks each, at pet levels 1, 8, 16, 24, 32, 40, 48 and 56. Prowl and Dash, 3 ranks each, at pet levels 30, 40 and 50. <span class="tag t-dm">Datamined (unconfirmed)</span> One beta tester could not teach Dash until 32; unresolved. <span class="tag t-un">Unverified</span></li>
 <li>Whether a cat can learn Bite above rank 2 is untested by the community. <span class="tag t-un">Unverified</span></li>
 <li>No verified benefit has been found for replacing your current cat just for attack speed. Testers reported that pets of one family deal about the same damage whatever their speed, and Blizzard has not commented. <span class="tag t-un">Unverified</span></li>
 <li>Replace the cat only for a reason you can check in game: a different family's ability you want, or a cat at or below your level that you prefer. Keep temporary teachers separate; release them once their rank shows as learned.</li>
 <li>When you untrain a pet, it keeps its built-in attack speed. <span class="tag t-off">Official notes</span></li>
 <li>Blizzard announced on 6 Nov that Hunter pets will get a hotfix on 10 Nov to tank about as well as in Classic Era. No numbers were given and it isn't live yet, so nothing here assumes it. <span class="tag t-off">Official notes</span></li></ul></div>
 <h2>Changelog</h2>
-<div class="card"><ul><li><b>v0.2.0 · 8 Nov 2026:</b> Added pet-level gates for cat and pet trainer ranks from datamined client data, plus a catch-up check by pet level. The planned 10 Nov pet hotfix is now confirmed from Blizzard's announcement (not live yet). Teaching beasts, training-point costs and pet trainer locations stay unknown. Hunter unlocks now follow the datamined trainer list.</li></ul></div>
+<div class="card"><ul><li><b>v0.3.0 · 9 Nov 2026:</b> Self-hosted ability and pet-family icons beside labels (never replacing Unknown/Unverified tags). Learn-vs-teach and trainer skills kept distinct. No teacher-beast images. Milestone catch-up unchanged. 10 Nov pet hotfix still planned/not live.</li>
+<li><b>v0.2.0 · 8 Nov 2026:</b> Added pet-level gates for cat and pet trainer ranks from datamined client data, plus a catch-up check by pet level. The planned 10 Nov pet hotfix is now confirmed from Blizzard's announcement (not live yet). Teaching beasts, training-point costs and pet trainer locations stay unknown. Hunter unlocks now follow the datamined trainer list.</li></ul></div>
+<p class="copyright-note">World of Warcraft® icons and artwork © Blizzard Entertainment. Used under Blizzard's fansite guidelines for non-commercial fan content; Blizzard may revoke permission.</p>
 <p class="sub">Sources: community sources, datamined client data and official Blizzard posts. Progress is saved on this device only, if your browser allows it.</p>
 </main></div>
 <script>
